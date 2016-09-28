@@ -1,4 +1,0 @@
-import java.*;
-
-print("hello.world");
-print("hello.world");
