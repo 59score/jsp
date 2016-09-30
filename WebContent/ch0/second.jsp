@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="user" class="" scope="session"/ >
 哎哟 怎么还不下课~
 <h1>
 我刚才输入的名字是<%=request.getParameter("name") %>
