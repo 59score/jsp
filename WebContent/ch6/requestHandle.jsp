@@ -10,6 +10,9 @@
 <%
 	String textContent = request.getParameter("name");
 	String buttonName = request.getParameter("submit");
+	
+	String paramName ;
+	String value ;
 %>
 
 <h1>
@@ -17,6 +20,8 @@
 </h1>
 <h1>
 	按钮信息： <%=buttonName %>
+	
+	<%=request.getRemoteHost() %>
 </h1>		
 </body>
 </html>
