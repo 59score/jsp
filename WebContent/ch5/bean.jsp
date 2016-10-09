@@ -7,6 +7,7 @@
 <title>javaBean的使用</title>
 </head>
 <body>
+<jsp:useBean id="user" class="com.sccc.User"></jsp:useBean>
 <jsp:setProperty property="username"  name="user" value="liang"/>
 <jsp:setProperty property="gender" name="user" value="女"/>
 <jsp:setProperty property="age"  name="user" value="18"/>

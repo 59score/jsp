@@ -10,10 +10,10 @@
 <%
 	String textContent = request.getParameter("name");
 	String buttonName = request.getParameter("submit");
-	
+%>	
 	String paramName ;
 	String value ;
-%>
+
 
 <h1>
 	文本框输入的信息： <%=textContent %>
