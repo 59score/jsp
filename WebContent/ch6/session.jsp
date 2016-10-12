@@ -15,7 +15,7 @@
 
    // 检测网页是否由新的访问用户
    if (session.isNew()){
-      title = "访问菜鸟教程实例";
+      title = "这里是session";
       session.setAttribute(userIDKey, userID);
       session.setAttribute(visitCountKey,  visitCount);
    } else {
