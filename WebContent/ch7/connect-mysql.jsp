@@ -8,8 +8,16 @@
   Class.forName("com.mysql.jdbc.Driver").newInstance();
   String connectSQL = "jdbc:mysql://localhost:3306/software";
   Connection conn=java.sql.DriverManager.getConnection(connectSQL,"root","");
+  
+  
   Statement stmt=conn.createStatement();
-  ResultSet rs=stmt.executeQuery("select * from student");
+  ResultSet rs=stmt.executeQuery("select * from student where id=" + "2343");
+  
+  String sql = "select * from student where age = ?";  // º¬ÓÐ²ÎÊý
+  PreparedStatement st = conn.prepareStatement(sql);
+  st.setInt(1, 18);
+  rs = st.executeQuery();
+
   
   out.println("<table>");
   while(rs.next())
