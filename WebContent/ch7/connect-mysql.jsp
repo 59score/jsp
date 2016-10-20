@@ -11,13 +11,7 @@
   
   
   Statement stmt=conn.createStatement();
-  ResultSet rs=stmt.executeQuery("select * from student where id=" + "2343");
-  
-  String sql = "select * from student where age = ?";  // 含有参数
-  PreparedStatement st = conn.prepareStatement(sql);
-  st.setInt(1, 18);
-  rs = st.executeQuery();
-
+  ResultSet rs=stmt.executeQuery("select * from student");
   
   out.println("<table>");
   while(rs.next())
@@ -39,7 +33,7 @@
   <%
   String sql = "select * from student where age = ?";  // 含有参数
   PreparedStatement st = conn.prepareStatement(sql);
-  st.setInt(1, 18);
+  st.setInt(1, 20);
   rs = st.executeQuery();
   
   out.println("<table>");

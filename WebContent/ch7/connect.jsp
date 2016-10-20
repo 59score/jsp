@@ -1,24 +1,22 @@
 <%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*,java.io.*"%>
 <html>
 <body>
+
+<table>
 <%
 
-  Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver").newInstance();
-  String connectSQL = "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=data";
+  Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+  String connectSQL = "jdbc:sqlserver://localhost:1433;DatabaseName=data";
   Connection conn=java.sql.DriverManager.getConnection(connectSQL,"sa","123456");
   Statement stmt=conn.createStatement();
   ResultSet rs=stmt.executeQuery("select * from student");
   while(rs.next())
   {
     out.println("<tr>");
-    out.println("<td>"+rs.getInt("num")+"</td>");
+    out.println("<td>"+rs.getInt("id")+"</td>");
     out.println("<td>"+rs.getString("name")+"</td>");
     out.println("<td>"+rs.getInt("age")+"</td>");
-    out.println("<td>"+rs.getString("fromw")+"</td>");
-    out.println("<td>"+rs.getString("school")+"</td>");
     out.println("<td>"+rs.getString("major")+"</td>");
-    out.println("<td>"+rs.getInt("score")+"</td>");
-    out.println("</tr>");
     out.println("</tr>");
   }
   rs.close();
