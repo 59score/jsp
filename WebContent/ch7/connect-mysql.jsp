@@ -17,7 +17,7 @@
   while(rs.next())
   {
     out.println("<tr>");
-    out.println("<td>"+rs.getInt("id")+"</td>");
+    out.println("<td> <a href='update.jsp?id="+rs.getInt("id")+ "'>Ñ§ºÅ</a>" + "</td>");
     out.println("<td>"+rs.getString("name")+"</td>");
     out.println("<td>"+rs.getInt("age")+"</td>");
     out.println("<td>"+rs.getString("major")+"</td>");
