@@ -16,7 +16,7 @@
 
 <form action="deleteStudent.jsp" method="post">
 	请输入要删除的ID号:<input type="text" name="id" />
-	<button type="submit">提交</button>
+	<button type="submit"> 提交 </button>
 </form>
 </body>
 </html>
