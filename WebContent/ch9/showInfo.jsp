@@ -37,6 +37,12 @@
 		if(gf.getAi() > 30){
 			out.print("<h1>哎哟，不错哦，女朋友还是蛮喜欢你的嘛~</h1>");
 		}
+		out.print("<p><a href='status.jsp'>继续测试！</a></p>");
+		
+	}
+
+	if(gf.getAi() > 100){
+		out.print("<h1>恭喜你们可以步入殿堂~</h1>");
 	}
 	
 %>

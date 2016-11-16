@@ -10,7 +10,7 @@
 <body>
 
 <jsp:useBean id="status" class="com.sccc.Status" scope="session" />
-<h1>前方高能！前方高能！</h1>
+<h1>这不是演习！！这不是演习！！</h1>
 <form action="showInfo.jsp" method="post">
 	<%
 		

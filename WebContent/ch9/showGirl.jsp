@@ -28,5 +28,7 @@
 <p> 女朋友的怒值：<jsp:getProperty name="myGirlFriend" property="shengQi"/></p>
 <p> 女朋友的爱值：<jsp:getProperty name="myGirlFriend" property="ai"/></p>
 
+<p><a href="status.jsp">前方高能！！开始测试！！！</a></p>
+
 </body>
 </html>
