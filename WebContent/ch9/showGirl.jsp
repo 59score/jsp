@@ -23,8 +23,8 @@
 <body>
 
 <p> 女朋友的颜值：<jsp:getProperty name="myGirlFriend" property="yanZhi"/> 分 </p>
-<p> 女朋友的身高：<jsp:getProperty name="myGirlFriend" property="tiZhong"/>cm</p>
-<p> 女朋友的体重：<jsp:getProperty name="myGirlFriend" property="shenGao"/>kg </p>
+<p> 女朋友的体重：<jsp:getProperty name="myGirlFriend" property="tiZhong"/>kg</p>
+<p> 女朋友的身高：<jsp:getProperty name="myGirlFriend" property="shenGao"/>cm </p>
 <p> 女朋友的怒值：<jsp:getProperty name="myGirlFriend" property="shengQi"/></p>
 <p> 女朋友的爱值：<jsp:getProperty name="myGirlFriend" property="ai"/></p>
 
