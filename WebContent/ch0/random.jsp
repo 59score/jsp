@@ -6,7 +6,7 @@
 <title>Insert title here</title></head>
 <body>
 
-<% int random = (int)(Math.random()*100) % 37; %>
+<% int random = (int)(Math.random()*100) % 39; %>
 
 <h1>
 中奖的同学是:<%=random %>号
