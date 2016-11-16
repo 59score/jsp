@@ -11,7 +11,8 @@
 
 <jsp:useBean id="status" class="com.sccc.Status" scope="session" />
 <h1>前方高能！前方高能！</h1>
-<%
+<form action="showInfo.jsp" method="post">
+	<%
 		
 		String test = status.getZhuangTai().get(0);//取出问题
 		ArrayList<String> xuanXiang = status.getTiMu().get(test);//根据问题取出选项
@@ -21,10 +22,14 @@
 		//显示出所有选项
 		for(int i = 0;i<4;i++){
 			String neiRong = xuanXiang.get(i);
-			out.print("<p><input type='radio'>" + neiRong + "</input></p>");
+			String num = String.valueOf(i);
+			out.print("<p><input type='radio' name='phone' value='+"
+			 			+ num + "'>" + neiRong + "</input></p>");
 		}
 		
-%>
+	%>
+	<button>提交</button>
+</form>
 
 </body>
 </html>
