@@ -2,6 +2,8 @@ package com.sccc.ch10;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,29 +17,28 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public HelloServlet() {
-        super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * 处理get方法所传递过来的数据
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();
-		out.println("this is a Servlet From Hello");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	protected void doGet(HttpServletRequest request, 
+			HttpServletResponse response) 
+			throws ServletException, IOException {
+		//简单转向
+		response.sendRedirect("/jsp/index.jsp");
+		
+		//带数据转向
+		request.setAttribute("name", "hello"); // 为request对象添加参数
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");    // 使用req对象获取RequestDispatcher对象
+        dispatcher.forward(request, response);  
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 *处理Post方法所传递过来的数据
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
