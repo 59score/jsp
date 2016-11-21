@@ -22,17 +22,11 @@ import com.sccc.GirlFriend;
 public class GirlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
     public GirlServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<String> zhuangTai ;//用来保存随机状态
 		HashMap<String, ArrayList<String>> tiMu; //用来保存随机状态和选项
