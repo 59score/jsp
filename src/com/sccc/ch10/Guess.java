@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Guess
  */
-@WebServlet("/Guess")
+//@WebServlet("/Guess")
 public class Guess extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public Guess() {
@@ -44,7 +44,6 @@ public class Guess extends HttpServlet {
 		}
 		
 		request.setAttribute("random", random); // 为request对象添加参数
-		request.setAttribute("guess", guess); // 为request对象添加参数
 		request.setAttribute("info", info); // 为request对象添加参数
 		
         RequestDispatcher dispatcher = request.getRequestDispatcher("/ch10/guess.jsp");    // 使用req对象获取RequestDispatcher对象

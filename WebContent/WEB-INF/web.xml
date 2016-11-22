@@ -5,15 +5,24 @@
     <servlet-class>com.sccc.ch10.HelloServlet</servlet-class>
   </servlet>
   <servlet>
-    <servlet-name>Girl</servlet-name>
-    <servlet-class>com.sccc.ch10.GirlServlet</servlet-class>
+    <servlet-name>Guess</servlet-name>
+    <servlet-class>com.sccc.ch10.Guess</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
     <url-pattern>/Hello</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>Girl</servlet-name>
-    <url-pattern>/Girl</url-pattern>
+    <servlet-name>Guess</servlet-name>
+    <url-pattern>/Guess</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>ZhuCe</servlet-name>
+    <servlet-class>com.sccc.ch10.ZhuCeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ZhuCe</servlet-name>
+    <url-pattern>/zhuCe</url-pattern>
   </servlet-mapping>
 </web-app>
