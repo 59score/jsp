@@ -17,7 +17,7 @@
     <url-pattern>/Guess</url-pattern>
   </servlet-mapping>
   
-    <servlet>
+  <servlet>
     <servlet-name>ZhuCe</servlet-name>
     <servlet-class>com.sccc.ch10.ZhuCeServlet</servlet-class>
   </servlet>
