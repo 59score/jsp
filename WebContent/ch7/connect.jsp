@@ -30,6 +30,8 @@
   PreparedStatement st = conn.prepareStatement(sql);
   st.setString(1, "¶ùÍ¯"); // ²ÎÊý¸³Öµ
   st.setInt(2, 22);
+  
+  ResulteSet set  = st.executeQuery();
   System.out.println(st.toString()); //com.mysql.jdbc.JDBC4PreparedStatement@d704f0: select * from goods where min_name = '¶ùÍ¯'
   %>  
 </table>
