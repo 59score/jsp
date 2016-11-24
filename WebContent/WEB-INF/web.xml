@@ -8,15 +8,19 @@
     <servlet-name>Guess</servlet-name>
     <servlet-class>com.sccc.ch10.Guess</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>Hero</servlet-name>
+    <servlet-class>com.sccc.lol.HeroServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
-    <servlet-name>HelloServlet</servlet-name>
-    <url-pattern>/Hello</url-pattern>
+    <servlet-name>Hero</servlet-name>
+    <url-pattern>/hero</url-pattern>
   </servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>Guess</servlet-name>
     <url-pattern>/Guess</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>ZhuCe</servlet-name>
     <servlet-class>com.sccc.ch10.ZhuCeServlet</servlet-class>
