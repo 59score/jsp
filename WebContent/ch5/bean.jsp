@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<jsp:useBean id="user" class="com.sccc.User"></jsp:useBean>
+<jsp:useBean id="user" class="com.sccc.User" />
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>javaBean的使用</title>
 </head>
 <body>
-<jsp:useBean id="user" class="com.sccc.User"></jsp:useBean>
 <jsp:setProperty property="username"  name="user" value="liang"/>
 <jsp:setProperty property="gender" name="user" value="女"/>
 <jsp:setProperty property="age"  name="user" value="18"/>
