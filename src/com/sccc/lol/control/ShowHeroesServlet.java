@@ -27,7 +27,7 @@ public class ShowHeroesServlet extends HttpServlet {
 		List<Hero> heroes = manager.findAll();
 		
 		request.setAttribute("heroes", heroes);
-		RequestDispatcher dis = request.getRequestDispatcher("heroes.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("/lolView/heroes.jsp");
 		dis.forward(request, response);
 	}
 

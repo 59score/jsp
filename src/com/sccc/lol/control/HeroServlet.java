@@ -31,7 +31,7 @@ public class HeroServlet extends HttpServlet {
 		Hero hero = manager.findOne(id);
 		
 		request.setAttribute("hero", hero);
-		RequestDispatcher dis = request.getRequestDispatcher("hero.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("/lolView/hero.jsp");
 		dis.forward(request, response);
 	}
 

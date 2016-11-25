@@ -16,6 +16,14 @@
     <servlet-name>Hero</servlet-name>
     <url-pattern>/hero</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AllHero</servlet-name>
+    <servlet-class>com.sccc.lol.control.ShowHeroesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AllHero</servlet-name>
+    <url-pattern>/allhero</url-pattern>
+  </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>Guess</servlet-name>
