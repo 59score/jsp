@@ -87,7 +87,8 @@ public class HeroManager {
 	 */
 	public void add(Hero hero){
 		
-		String sql = "insert into hero (name, nick_name, avatar, image, description) values(?,?,?,?,?)";
+		String sql = "insert into hero (name, nick_name, avatar, "
+				+ "image, description) values(?,?,?,?,?)";
 		conn = getConnetion();
 		
 		try {

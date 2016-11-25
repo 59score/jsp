@@ -15,5 +15,6 @@
 <%=hero.getName() %>
 <%=hero.getNickName() %>
 <img src="http://localhost:8080/jsp/<%=hero.getImage() %>" />
+<a href="http://localhost:8080/jsp/hero?id=<%=hero.getId()%>">修改</a>
 </body>
 </html>

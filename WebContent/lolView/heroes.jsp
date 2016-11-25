@@ -21,7 +21,11 @@
 	for(Hero hero:heroes){
 %>
 		<tr>
-			<td><a href="http://localhost:8080/jsp/hero?id=<%=hero.getId()%>"> <%=hero.getName()%></a></td>
+			<td>
+				<a href="http://localhost:8080/jsp/hero?id=<%=hero.getId()%>"> 
+				<%=hero.getName()%>
+				</a>
+			</td>
 			<td><%=hero.getNickName() %></td>
 		</tr>
 
