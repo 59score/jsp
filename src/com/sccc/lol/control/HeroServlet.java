@@ -39,7 +39,10 @@ public class HeroServlet extends HttpServlet {
 	 * 修改、添加某一个英雄
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Integer id = Integer.parseInt(request.getParameter("id"));
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
+		
+		String idStr = request.getParameter("id");
 		HeroManager manager = new HeroManager();
 		Hero hero = new Hero();
 		
@@ -51,18 +54,20 @@ public class HeroServlet extends HttpServlet {
 		
 		String info;
 		
-		if(id == null){
+		if(idStr == null){
 			manager.add(hero);
 			 info = "英雄已成功添加！";
 		}else{
+			int id = Integer.parseInt(idStr);
+			hero.setId(id);
 			manager.modify(hero);
-			 info = "英雄已成功修改！";
+			info = "英雄已成功修改！";
 		}
 		
 		request.setAttribute("info", info);
 		request.setAttribute("hero", hero);
 		
-		RequestDispatcher dis = request.getRequestDispatcher("hero.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("/lolView/hero.jsp");
 		dis.forward(request, response);
 	}
 

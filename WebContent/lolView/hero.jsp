@@ -10,7 +10,7 @@
 <body>
 
 <%
-	Hero hero = (Hero)request.getAttribute("Hero");
+	Hero hero = (Hero)request.getAttribute("hero");
 %>
 <%=hero.getName() %>
 <%=hero.getNickName() %>

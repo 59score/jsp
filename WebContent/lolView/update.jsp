@@ -5,37 +5,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 <title>英雄联盟</title>
 </head>
 <body>
+<div class="container ">
+
 <h1 class="center">添加英雄</h1>
-<form action="/hero" method="post" class="form-horizontal" role="form">
+<form action="/jsp/hero" method="post" class="form-horizontal" role="form">
 
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">英雄姓名</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder="name">
+      <input name="name" type="text" class="form-control" id="name" placeholder="name">
     </div>
   </div>
  
    <div class="form-group">
     <label for="nickName" class="col-sm-2 control-label">昵称</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="nickName" placeholder="nickName">
+      <input name="nickName" type="text" class="form-control" id="nickName" placeholder="nickName">
     </div>
   </div>
   
   <div class="form-group">
     <label for="avatar" class="col-sm-2 control-label">英雄头像</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="avatar" placeholder="avatar">
+      <input name="avatar" type="text" class="form-control" id="avatar" placeholder="avatar">
     </div>
   </div>
   
   <div class="form-group">
     <label for="image" class="col-sm-2 control-label">英雄背景</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="image" placeholder="image">
+      <input name="image" type="text" class="form-control" id="image" placeholder="image">
     </div>
   </div>
   
@@ -53,5 +56,7 @@
   </div>
   
 </form>
+
+</div>
 </body>
 </html>

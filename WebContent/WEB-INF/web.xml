@@ -10,7 +10,7 @@
   </servlet>
   <servlet>
     <servlet-name>Hero</servlet-name>
-    <servlet-class>com.sccc.lol.HeroServlet</servlet-class>
+    <servlet-class>com.sccc.lol.control.HeroServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Hero</servlet-name>
