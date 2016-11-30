@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.lol.model.HeroManager;
 import com.sccc.lol.model.Hero;
-import com.sccc.lol.model.HeroManager;
 
 public class HeroServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
