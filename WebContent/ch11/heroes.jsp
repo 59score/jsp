@@ -19,6 +19,20 @@
 	<tr>
 <% 
 	ArrayList<Hero> heroes = (ArrayList<Hero>) request.getAttribute("heroes");
+	
+%>
+	<c:forEach items="${heroes}" var="hero">
+		<tr>
+		   <td>
+		   	<c:out value="${hero.name}"/><p>
+		   </td>
+		   <td>
+		   	<c:out value="${hero.nickName}" />
+		   </td>
+	    </tr>
+	</c:forEach>
+	
+<%
 	for(Hero hero:heroes){
 %>
 		<tr>
@@ -34,22 +48,9 @@
 	}
 %>
 </table>
+<table>
 
-<c:if test="${i == 1}" >
-	<tr>
-		<td> 不得了，不得了，欢迎回来CEO。</td>
-	</tr>
-</c:if>
-<c:if test="${i != 1}" >
-	<tr>
-		<td> 虽然你现在是普通用户，屌丝，你也有上天的一天。</td>
-	</tr>
-</c:if>
-
-<c:forEach items="heroes" var="hero">
-   <c:out value="${hero.name}"/><p>
-</c:forEach>
-
+</table>
 </div>                                      -
 </body>
 </html>
