@@ -3,6 +3,7 @@
 <%@ page import="com.sccc.ch11.Hero"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -50,7 +51,17 @@
 </table>
 <table>
 
+<<<<<<< HEAD
 </table>
 </div>                                      -
+=======
+<fmt:bundle basename="com.sccc.ch11.Chinese">
+   <fmt:message key="count.one"/><br/>
+   <fmt:message key="count.two"/><br/>
+   <fmt:message key="count.three"/><br/>
+</fmt:bundle>
+
+</div>
+>>>>>>> branch 'master' of https://github.com/59score/jsp.git
 </body>
 </html>
