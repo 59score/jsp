@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ page import="com.sccc.ch11.Hero"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,6 +35,21 @@
 %>
 </table>
 
-</div>
+<c:if test="${i == 1}" >
+	<tr>
+		<td> 不得了，不得了，欢迎回来CEO。</td>
+	</tr>
+</c:if>
+<c:if test="${i != 1}" >
+	<tr>
+		<td> 虽然你现在是普通用户，屌丝，你也有上天的一天。</td>
+	</tr>
+</c:if>
+
+<c:forEach items="heroes" var="hero">
+   <c:out value="${hero.name}"/><p>
+</c:forEach>
+
+</div>                                      -
 </body>
 </html>
