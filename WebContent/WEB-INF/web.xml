@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
-  <servlet>
-    <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>com.sccc.ch10.HelloServlet</servlet-class>
-  </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://java.sun.com/xml/ns/javaee" 
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+		version="3.0">
+
+<jsp-config>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+		<taglib-location>/WEB-INF/fmt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/fmt-rt</taglib-uri>
+		<taglib-location>/WEB-INF/fmt-rt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/c.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core-rt</taglib-uri>
+		<taglib-location>/WEB-INF/c-rt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/sql</taglib-uri>
+		<taglib-location>/WEB-INF/sql.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/sql-rt</taglib-uri>
+		<taglib-location>/WEB-INF/sql-rt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/x</taglib-uri>
+		<taglib-location>/WEB-INF/x.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jstl/x-rt</taglib-uri>
+		<taglib-location>/WEB-INF/x-rt.tld</taglib-location>
+	</taglib>
+</jsp-config>
+		
   <servlet>
     <servlet-name>Guess</servlet-name>
     <servlet-class>com.sccc.ch10.Guess</servlet-class>
@@ -18,13 +53,8 @@
   </servlet-mapping>
   <servlet>
     <servlet-name>AllHero</servlet-name>
-    <servlet-class>com.sccc.lol.control.ShowHeroesServlet</servlet-class>
+    <servlet-class>com.sccc.ch11.HeroesServlet</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>AllHero</servlet-name>
-    <url-pattern>/allhero</url-pattern>
-  </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>Guess</servlet-name>
     <url-pattern>/Guess</url-pattern>
@@ -36,5 +66,9 @@
   <servlet-mapping>
     <servlet-name>ZhuCe</servlet-name>
     <url-pattern>/zhuCe</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>AllHero</servlet-name>
+    <url-pattern>/heroes</url-pattern>
   </servlet-mapping>
 </web-app>
