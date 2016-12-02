@@ -41,5 +41,12 @@
 	</c:choose>
 	
 	<a href="<c:url value="/heroes" />">查看所有英雄</a>
+	<%
+		String hello[] = {"a", "b"};
+	%>
+	
+	<c:forEach items="${hello}" var="zi">
+		<p><c:out value="${zi}" /></p>
+	</c:forEach>
 </body>
 </html>

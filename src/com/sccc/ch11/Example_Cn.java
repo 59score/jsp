@@ -1,6 +1,8 @@
 package com.sccc.ch11;
 
-public class English {
+import java.util.ListResourceBundle;
+
+public class Example_Cn extends ListResourceBundle{
 
 	  public Object[][] getContents() {
 	    return contents;

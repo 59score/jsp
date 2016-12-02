@@ -33,35 +33,7 @@
 	    </tr>
 	</c:forEach>
 	
-<%
-	for(Hero hero:heroes){
-%>
-		<tr>
-			<td>
-				<a href="http://localhost:8080/jsp/hero?id=<%=hero.getId()%>"> 
-				<%=hero.getName()%>
-				</a>
-			</td>
-			<td><%=hero.getNickName() %></td>
-		</tr>
-
-<%
-	}
-%>
 </table>
 <table>
-
-<<<<<<< HEAD
-</table>
-</div>                                      -
-=======
-<fmt:bundle basename="com.sccc.ch11.Chinese">
-   <fmt:message key="count.one"/><br/>
-   <fmt:message key="count.two"/><br/>
-   <fmt:message key="count.three"/><br/>
-</fmt:bundle>
-
-</div>
->>>>>>> branch 'master' of https://github.com/59score/jsp.git
 </body>
 </html>

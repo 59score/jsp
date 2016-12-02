@@ -28,8 +28,10 @@ public class HeroesServlet extends HttpServlet {
 		List<Hero> heroes = manager.findAll();//找到所有的英雄
 		
 		request.setAttribute("heroes", heroes);//将所有的英雄放到request中
+		
 		RequestDispatcher dis = request.getRequestDispatcher("/ch11/heroes.jsp");
 		dis.forward(request, response);//带着所有的英雄转向。
+		
 	}
 
 }

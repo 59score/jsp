@@ -9,5 +9,19 @@
 </head>
 <body>
 
+<fmt:setLocale value="en"/>
+<fmt:bundle basename="com.sccc.ch11.Example">
+   <fmt:message key="count.one"/><br/>
+   <fmt:message key="count.two"/><br/>
+   <fmt:message key="count.three"/><br/>
+</fmt:bundle>
+
+<fmt:setBundle basename="com.sccc.ch11.Example" var="lang"/>
+
+<fmt:message key="count.one" bundle="${lang}"/><br/>
+<fmt:message key="count.two" bundle="${lang}"/><br/>
+<fmt:message key="count.three" bundle="${lang}"/><br/>
+
+
 </body>
 </html>
