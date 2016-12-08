@@ -28,7 +28,7 @@
 <p>字符串长度 (2) : ${fn:length(string2)}</p>
 
 <c:set var="string1" value="This is first String."/>
-<c:set var="string2" value="${fn:substring(string1, 5, 15)}" />
+<c:set var="string2" value="${fn:substring(string1, 1, 5)}" />
 
 <p>生成的子字符串为 : ${string2}</p>
 
