@@ -1,4 +1,6 @@
-<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*,java.io.*"%>
+<%@ page contentType="text/html; charset=gb2312" 
+		 language="java" 
+		 import="java.sql.*,java.io.*"%>
 <html>
 <body>
 
@@ -29,7 +31,7 @@
   st.setString(1, "¶ùÍ¯"); // ²ÎÊý¸³Öµ
   st.setInt(2, 22);
   
-  ResulteSet set  = st.executeQuery();
+  ResultSet set  = st.executeQuery();
   System.out.println(st.toString()); //com.mysql.jdbc.JDBC4PreparedStatement@d704f0: select * from goods where min_name = '¶ùÍ¯'
   %>  
 </table>
