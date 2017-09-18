@@ -2,3 +2,7 @@
 .jdbc-table{
 	margin:50px;
 }
+
+.text-danger {
+  color: #a94442;
+}

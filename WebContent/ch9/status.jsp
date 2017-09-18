@@ -23,7 +23,7 @@
 		for(int i = 0;i<4;i++){
 			String neiRong = xuanXiang.get(i);
 			String num = String.valueOf(i);
-			out.print("<p><input type='radio' name='phone' value='+"
+			out.print("<p><input type='radio' name='phone' value='"
 			 			+ num + "'>" + neiRong + "</input></p>");
 		}
 		

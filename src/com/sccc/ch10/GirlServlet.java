@@ -18,7 +18,7 @@ import com.sccc.GirlFriend;
 /**
  * Servlet implementation class GirlServlet
  */
-@WebServlet("/GirlServlet")
+@WebServlet("/Girl")
 public class GirlServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -58,12 +58,14 @@ public class GirlServlet extends HttpServlet {
 		//TODO:随机生成选择内容：
 		String zhTai = zhuangTai.get(0);//取出问题
 		ArrayList<String> xuanXiang = tiMu.get(zhTai);//根据问题取出选项
-		
+				
 		request.setAttribute("zhuangTai", zhTai); // 为request对象添加参数
 		request.setAttribute("xuanXiang", xuanXiang); // 为request对象添加参数
 		
         RequestDispatcher dispatcher = request.getRequestDispatcher("/ch10/status.jsp");    // 使用req对象获取RequestDispatcher对象
-        dispatcher.forward(request, response);  
+        dispatcher.forward(request, response);
+        
+        
 
 	}
 
@@ -74,6 +76,14 @@ public class GirlServlet extends HttpServlet {
 		
 		HttpSession session=request.getSession();
 		GirlFriend gf = (GirlFriend)session.getAttribute("myGirlFriend");//从session中获得一个女朋友
+		ArrayList<String> zhuangTai ;//用来保存随机状态
+		HashMap<String, ArrayList<String>> tiMu; //用来保存随机状态和选项
+
+		//初始化值
+		zhuangTai = new ArrayList<String>();
+		tiMu = new HashMap<String, ArrayList<String>>();
+
+		
 		String phone = request.getParameter("phone");//从刚才的页面中得到选项内容
 		
 		int shengQi = gf.getShengQi();//获得现在女朋友的生气值
@@ -110,6 +120,37 @@ public class GirlServlet extends HttpServlet {
 		}
 		
 		session.setAttribute("info", info);
+		
+		//初始化值
+		zhuangTai = new ArrayList<String>();
+		tiMu = new HashMap<String, ArrayList<String>>();
+		
+		//情况添加
+		String qingKuang = "没有接到女朋友电话";
+		zhuangTai.add(qingKuang);
+		
+		//选项添加
+		String xuanXiang1 = "我手机静音了 ";
+		String xuanXiang2 = "我在打游戏";
+		String xuanXiang3 = "我在给你买东西";
+		String xuanXiang4 = "我在工作";
+		
+		ArrayList<String> temp = new ArrayList<String>();
+		//生成中间变量
+		temp.add(xuanXiang1);
+		temp.add(xuanXiang2);
+		temp.add(xuanXiang3);
+		temp.add(xuanXiang4);
+		
+		//将情况和选项放入hash表
+		tiMu.put(qingKuang, temp);
+		
+		//TODO:随机生成选择内容：
+		String zhTai = zhuangTai.get(0);//取出问题
+		ArrayList<String> xuanXiang = tiMu.get(zhTai);//根据问题取出选项
+				
+		request.setAttribute("zhuangTai", zhTai); // 为request对象添加参数
+		request.setAttribute("xuanXiang", xuanXiang); // 为request对象添加参数
 		
         RequestDispatcher dispatcher = request.getRequestDispatcher("/ch10/status.jsp");    // 使用req对象获取RequestDispatcher对象
         dispatcher.forward(request, response);  

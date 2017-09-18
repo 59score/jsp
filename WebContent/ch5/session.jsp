@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; utf-8"
-    pageEncoding="utf-8"%>
+    pageEncoding="utf-8"
+    errorPage="./error.jsp"%>
+    
     
 <html>
 <head>
@@ -12,6 +14,7 @@
 	<%
 	    String name = "liang";
 		session.setAttribute("anotherusername",name);
+		int a = 0/0;
 	%>
 	</br>
 	<h1>

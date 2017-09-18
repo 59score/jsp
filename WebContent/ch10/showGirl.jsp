@@ -8,16 +8,17 @@
 <!-- 初始化女朋友 -->
 <jsp:useBean id="myGirlFriend" class="com.sccc.GirlFriend" scope="session"/>
 
-<!-- 一次填入，再无烦恼 -->
+<!-- 一次填入，再无烦恼 
 <jsp:setProperty property="*" name="myGirlFriend"/>
+-->
 
-<!-- 将刚才填入的值，设置到女朋友内。 
+<!-- 将刚才填入的值，设置到女朋友内。 -->
 <jsp:setProperty name="myGirlFriend" property="yanZhi" />
 <jsp:setProperty name="myGirlFriend" property="tiZhong" />
 <jsp:setProperty name="myGirlFriend" property="shenGao" />
 <jsp:setProperty name="myGirlFriend" property="shengQi" />
 <jsp:setProperty name="myGirlFriend" property="ai" />
--->
+
 
 </head>
 <body>
